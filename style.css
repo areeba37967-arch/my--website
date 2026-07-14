@@ -5,97 +5,100 @@
     font-family: 'Arial', sans-serif;
 }
 
+body {
+    background: #fff8f8;
+}
+
 header {
-    background: #e91e63;
+    background: linear-gradient(90deg, #ff4d6d, #ff758f);
     color: white;
-    padding: 20px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
+    animation: slideDown 0.8s ease;
 }
-
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
-
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+nav a:hover {
+    transform: scale(1.1);
+    display: inline-block;
 }
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1488477181944-6428a0291777?w=1200');
-    background-size: cover;
-    color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
+    background: url('https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=1200') center/cover;
+    color: white;
+    animation: fadeIn 1.5s ease;
 }
-
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
 .hero button {
-    background: #e91e63;
+    background: #ff4d6d;
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 30px;
-    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin-top: 15px;
     cursor: pointer;
+    transition: 0.3s;
 }
-
-.cakes {
-    padding: 50px 20px;
-    text-align: center;
+.hero button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255,77,109,0.4);
 }
 
 .cake-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    padding: 40px;
 }
-
 .cake-card {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 300px;
-    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: 0.4s;
+    animation: fadeInUp 1s ease;
 }
-
+.cake-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255,77,109,0.3);
+}
 .cake-card img {
     width: 100%;
     border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
 }
 
-.cake-card button {
-    background: #e91e63;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-top: 10px;
-    cursor: pointer;
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-
-.about {
-    background: #ffeef2;
-    padding: 50px 20px;
-    text-align: center;
+@keyframes slideDown {
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0);}
+}
+@keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 
 footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 20px;
 }
