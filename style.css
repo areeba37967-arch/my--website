@@ -1,154 +1,714 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+/*=============================================
+            SWEET DELIGHTS PREMIUM CSS
+                PART 1
+==============================================*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap');
 
-body {
-    background: #fff8f8;
-    color: #333;
-}
-
-header {
-    background: linear-gradient(90deg, #ff4d6d, #ff758f);
-    color: white;
-    padding: 18px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(255,77,109,0.3);
-    animation: slideDown 0.8s ease;
-}
-.logo {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-nav a:hover {
-    transform: translateY(-3px);
-    display: inline-block;
-    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+:root{
+--primary:#ff4d6d;
+--secondary:#ff758f;
+--light:#fff8f8;
+--dark:#222;
+--white:#fff;
+--shadow:0 10px 35px rgba(0,0,0,.12);
+--transition:.4s ease;
+--gradient:linear-gradient(135deg,#ff4d6d,#ff758f,#ff9a9e);
 }
 
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=1200') center/cover;
-    color: white;
-    animation: fadeIn 1.5s ease;
-}
-.hero h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    animation: fadeInUp 1s ease 0.3s both;
-}
-.hero p {
-    font-size: 20px;
-    animation: fadeInUp 1s ease 0.5s both;
-}
-.hero button {
-    background: #ff4d6d;
-    color: white;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 30px;
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    animation: fadeInUp 1s ease 0.7s both;
-}
-.hero button:hover {
-    transform: scale(1.1) translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255,77,109,0.5);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
-.page-title {
-    text-align: center;
-    padding: 50px 20px 20px;
-    font-size: 36px;
-    font-weight: 700;
-    color: #ff4d6d;
-    animation: fadeInUp 0.8s ease;
+body{
+background:var(--light);
+overflow-x:hidden;
+color:#444;
+line-height:1.6;
 }
 
-.cake-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: auto;
-}
-.cake-card {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    transition: all 0.4s ease;
-    animation: fadeInUp 1s ease;
-}
-.cake-card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 15px 35px rgba(255,77,109,0.3);
-}
-.cake-card img {
-    width: 100%;
-    border-radius: 15px;
-    height: 220px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-.cake-card h3 {
-    font-size: 20px;
-    color: #ff4d6d;
-    margin-bottom: 8px;
-}
-.cake-card p {
-    font-size: 14px;
-    color: #666;
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:10px;
 }
 
-.content-box {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px;
+::-webkit-scrollbar-track{
+background:#ffe4ea;
 }
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-@keyframes slideDown {
-    from {transform: translateY(-100%);}
-    to {transform: translateY(0);}
-}
-@keyframes fadeInUp {
-    from {opacity: 0; transform: translateY(30px);}
-    to {opacity: 1; transform: translateY(0);}
+::-webkit-scrollbar-thumb{
+background:var(--primary);
+border-radius:20px;
 }
 
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    margin-top: 50px;
-    font-size: 14px;
+::-webkit-scrollbar-thumb:hover{
+background:#ff2f5d;
 }
+
+/*================ HEADER =================*/
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(20px);
+box-shadow:0 8px 30px rgba(0,0,0,.08);
+z-index:1000;
+animation:slideDown .8s;
+}
+
+.logo{
+font-size:34px;
+font-weight:700;
+font-family:'Great Vibes',cursive;
+color:var(--primary);
+text-decoration:none;
+letter-spacing:1px;
+}
+
+.logo span{
+color:#222;
+}
+
+nav{
+display:flex;
+gap:22px;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-weight:600;
+position:relative;
+transition:.3s;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0;
+height:3px;
+background:var(--primary);
+transition:.4s;
+border-radius:20px;
+}
+
+nav a:hover{
+color:var(--primary);
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/*================ BUTTONS =================*/
+
+.btn{
+display:inline-block;
+padding:14px 36px;
+background:var(--gradient);
+color:white;
+border:none;
+border-radius:40px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+text-decoration:none;
+transition:.4s;
+box-shadow:0 12px 30px rgba(255,77,109,.35);
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 20px 40px rgba(255,77,109,.45);
+}
+
+/*================ HERO =================*/
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 10%;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+animation:zoomHero 20s infinite alternate;
+}
+
+.hero-content{
+max-width:850px;
+animation:fadeUp 1.2s;
+}
+
+.hero h3{
+font-size:28px;
+font-family:'Great Vibes',cursive;
+margin-bottom:10px;
+color:#ffd6df;
+}
+
+.hero h1{
+font-size:68px;
+font-weight:800;
+margin-bottom:20px;
+line-height:1.1;
+text-shadow:0 5px 15px rgba(0,0,0,.4);
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:35px;
+}
+
+/* Floating Hearts */
+
+.hero::before{
+content:"❤";
+position:absolute;
+left:8%;
+top:25%;
+font-size:28px;
+animation:float 5s infinite;
+opacity:.4;
+}
+
+.hero::after{
+content:"❤";
+position:absolute;
+right:8%;
+bottom:18%;
+font-size:40px;
+animation:float2 6s infinite;
+opacity:.3;
+}
+
+/*================ TITLE =================*/
+
+.heading{
+font-size:42px;
+text-align:center;
+margin:80px 0 60px;
+color:var(--primary);
+font-weight:700;
+position:relative;
+}
+
+.heading::after{
+content:"";
+width:110px;
+height:5px;
+background:var(--gradient);
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+bottom:-18px;
+border-radius:20px;
+}
+
+/*================ CARD =================*/
+
+.cake-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+gap:35px;
+padding:0 8% 80px;
+}
+
+.cake-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:var(--shadow);
+transition:.45s;
+position:relative;
+}
+
+.cake-card:hover{
+transform:translateY(-15px);
+}
+
+.cake-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+transition:.5s;
+}
+
+.cake-card:hover img{
+transform:scale(1.1);
+}
+
+.sale{
+position:absolute;
+top:18px;
+left:-40px;
+background:var(--primary);
+color:white;
+padding:8px 45px;
+font-size:13px;
+transform:rotate(-45deg);
+font-weight:700;
+}
+
+.cake-info{
+padding:22px;
+}
+
+.cake-info h3{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.price{
+font-size:22px;
+font-weight:700;
+color:var(--primary);
+margin:15px 0;
+}
+
+.stars{
+color:#ffb400;
+font-size:18px;
+margin-bottom:15px;
+}
+
+/*================ ANIMATIONS =================*/
+
+@keyframes slideDown{
+
+from{
+transform:translateY(-100%);
+}
+
+to{
+transform:translateY(0);
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes zoomHero{
+
+from{
+background-size:100%;
+}
+
+to{
+background-size:115%;
+}
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-25px);
+}
+
+}
+
+@keyframes float2{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(30px);
+}
+
+}
+/* ===========================
+   Buttons
+=========================== */
+
+.btn{
+display:inline-block;
+padding:14px 32px;
+background:linear-gradient(45deg,#ff4d6d,#ff8fab);
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.4s;
+box-shadow:0 8px 20px rgba(255,77,109,.35);
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 15px 30px rgba(255,77,109,.5);
+}
+
+/* ===========================
+   Headings
+=========================== */
+
+.heading{
+font-size:48px;
+text-align:center;
+margin:70px 0 40px;
+color:#ff4d6d;
+font-family:'Great Vibes',cursive;
+}
+
+/* ===========================
+   Hero Content
+=========================== */
+
+.hero-content{
+max-width:700px;
+margin:auto;
+text-align:center;
+animation:fadeUp 1s ease;
+}
+
+.hero-content h3{
+font-size:28px;
+color:#fff;
+letter-spacing:2px;
+margin-bottom:15px;
+}
+
+.hero-content h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+/* ===========================
+   Cake Cards
+=========================== */
+
+.cake-card{
+background:#fff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.5s;
+position:relative;
+}
+
+.cake-card:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.cake-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+transition:.5s;
+}
+
+.cake-card:hover img{
+transform:scale(1.08);
+}
+
+.cake-info{
+padding:20px;
+text-align:center;
+}
+
+.cake-info h3{
+font-size:24px;
+margin-bottom:10px;
+color:#ff4d6d;
+}
+
+.cake-info p{
+font-size:16px;
+line-height:1.7;
+color:#666;
+margin-bottom:15px;
+}
+
+.price{
+font-size:24px;
+font-weight:bold;
+color:#ff4d6d;
+margin-bottom:15px;
+}
+
+.stars{
+color:gold;
+font-size:18px;
+margin-bottom:12px;
+}
+
+.sale{
+position:absolute;
+top:15px;
+left:15px;
+background:#ff1744;
+color:white;
+padding:8px 14px;
+border-radius:30px;
+font-size:14px;
+font-weight:bold;
+z-index:10;
+}
+/* ===========================
+   Contact Form
+=========================== */
+
+form{
+background:#ffffff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+form input,
+form textarea{
+width:100%;
+padding:16px;
+margin:12px 0;
+border:2px solid #ffd6de;
+border-radius:12px;
+font-size:16px;
+font-family:'Poppins',sans-serif;
+outline:none;
+transition:.3s;
+background:#fff;
+}
+
+form input:focus,
+form textarea:focus{
+border-color:#ff4d6d;
+box-shadow:0 0 15px rgba(255,77,109,.25);
+}
+
+form textarea{
+resize:vertical;
+min-height:150px;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+margin-top:80px;
+padding:60px 20px;
+background:linear-gradient(135deg,#ff4d6d,#ff8fab);
+color:#fff;
+text-align:center;
+}
+
+footer h2{
+font-size:48px;
+margin-bottom:15px;
+}
+
+footer p{
+font-size:17px;
+line-height:1.8;
+}
+
+footer a{
+color:#fff;
+font-size:26px;
+margin:0 12px;
+transition:.3s;
+}
+
+footer a:hover{
+color:#ffe066;
+transform:translateY(-5px) scale(1.2);
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#ffe5ec;
+}
+
+::-webkit-scrollbar-thumb{
+background:#ff4d6d;
+border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#e63956;
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes zoomIn{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-12px);
+}
+100%{
+transform:translateY(0);
+}
+}
+
+/* Floating animation on cards */
+
+.cake-card{
+animation:fadeUp .8s ease;
+}
+
+.hero img{
+animation:float 4s ease-in-out infinite;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media(max-width:992px){
+
+header{
+flex-direction:column;
+padding:20px;
+}
+
+nav{
+margin:20px 0;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+}
+
+.hero-content h1{
+font-size:52px;
+}
+
+.heading{
+font-size:40px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:100px 20px;
+}
+
+.hero-content h1{
+font-size:40px;
+}
+
+.hero-content h3{
+font-size:22px;
+}
+
+.hero-content p{
+font-size:17px;
+}
+
+.heading{
+font-size:34px;
+}
+
+.cake-grid{
+grid-template-columns:1fr;
+padding:20px;
+}
+
+.btn{
+padding:12px 24px;
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+font-size:28px;
+}
+
+.hero-content h1{
+font-size:32px;
+}
+
+.hero-content p{
+font-size:15px;
+}
+
+footer h2{
+font-size:34px;
+}
+
+}
+
+/* ===========================
+   End of CSS
+=========================== */
