@@ -1,196 +1,583 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+<head>
 
-html{
-    scroll-behavior:smooth;
-}
+<meta charset="UTF-8">
 
-body{
-    background:#fff8f9;
-    color:#333;
-}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Navbar */
+<title>Sweet Delights | Premium Cake Shop</title>
 
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(10px);
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    z-index:1000;
-}
+<link rel="stylesheet" href="style.css">
 
-nav{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 30px;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-.logo{
-    font-size:30px;
-    font-weight:700;
-    color:#e91e63;
-}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-nav ul{
-    display:flex;
-    list-style:none;
-}
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-nav ul li{
-    margin-left:25px;
-}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-nav ul li a{
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
-    transition:.3s;
-}
+</head>
 
-nav ul li a:hover{
-    color:#e91e63;
-}
+<body>
 
-/* Hero */
+<!--================ HEADER ================-->
 
-.hero{
-    margin-top:90px;
-    min-height:90vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px;
-    background:linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.3)),
-    url('images/hero.jpg') center/cover;
-}
+<header>
 
-.hero h1{
-    font-size:60px;
-    color:#d81b60;
-}
+<a href="index.html" class="logo">
+Sweet <span>Delights</span>
+</a>
 
-.hero p{
-    font-size:20px;
-    margin:20px 0;
-}
+<nav>
 
-.btn{
-    display:inline-block;
-    padding:15px 35px;
-    background:#e91e63;
-    color:white;
-    border-radius:40px;
-    text-decoration:none;
-    transition:.3s;
-}
+<a href="index.html">Home</a>
 
-.btn:hover{
-    background:#c2185b;
-    transform:translateY(-4px);
-}
+<a href="about.html">About</a>
 
-/* Section */
+<a href="cakes.html">Cakes</a>
 
-section{
-    padding:80px 10%;
-}
+<a href="birthday.html">Birthday</a>
 
-.title{
-    text-align:center;
-    font-size:40px;
-    color:#d81b60;
-    margin-bottom:50px;
-}
+<a href="wedding.html">Wedding</a>
 
-/* Cards */
+<a href="cupcakes.html">Cupcakes</a>
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
+<a href="gallery.html">Gallery</a>
 
-.card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-    transition:.4s;
-}
+<a href="services.html">Services</a>
 
-.card:hover{
-    transform:translateY(-10px);
-}
+<a href="faq.html">FAQ</a>
 
-.card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-}
+<a href="contact.html">Contact</a>
 
-.card-content{
-    padding:20px;
-}
+</nav>
 
-.card h3{
-    color:#e91e63;
-    margin-bottom:10px;
-}
+<a href="contact.html" class="btn">
+Order Now
+</a>
 
-.card p{
-    color:#666;
-    line-height:1.6;
-}
+</header>
 
-/* Footer */
+<!--================ HERO ================-->
 
-footer{
-    background:#e91e63;
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:60px;
-}
+<section class="hero">
 
-/* Responsive */
+<div class="hero-content">
 
-@media(max-width:768px){
+<h3>Freshly Baked Every Day</h3>
 
-.hero h1{
-font-size:40px;
-}
+<h1>Delicious Cakes<br>Made With Love</h1>
 
-nav{
-flex-direction:column;
-}
+<p>
 
-nav ul{
-margin-top:15px;
-flex-wrap:wrap;
-justify-content:center;
-}
+Celebrate birthdays, weddings, anniversaries and every special moment with our handcrafted premium cakes.
 
-nav ul li{
-margin:10px;
-}
+</p>
 
-.title{
-font-size:32px;
-}
+<a href="cakes.html" class="btn">
 
-}
+Explore Cakes
+
+</a>
+
+</div>
+
+</section>
+
+<!--================ FEATURED CAKES ================-->
+
+<section>
+
+<h2 class="heading">
+
+Featured Cakes
+
+</h2>
+
+<div class="cake-grid">
+
+<div class="cake-card">
+
+<span class="sale">
+Best Seller
+</span>
+
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80">
+
+<div class="cake-info">
+
+<h3>Chocolate Truffle</h3>
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+Rich chocolate sponge layered with silky chocolate ganache.
+
+</p>
+
+<div class="price">
+
+Rs.2,499
+
+</div>
+
+<a href="contact.html" class="btn">
+
+Order
+
+</a>
+
+</div>
+
+</div>
+
+<div class="cake-card">
+
+<span class="sale">
+Premium
+</span>
+
+<img src="https://images.unsplash.com/photo-1464306076886-da185f6a9d05?auto=format&fit=crop&w=700&q=80">
+
+<div class="cake-info">
+
+<h3>Red Velvet</h3>
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+Soft red velvet cake with delicious cream cheese frosting.
+
+</p>
+
+<div class="price">
+
+Rs.2,899
+
+</div>
+
+<a href="contact.html" class="btn">
+
+Order
+
+</a>
+
+</div>
+
+</div>
+
+<div class="cake-card">
+
+<span class="sale">
+Trending
+</span>
+
+<img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=700&q=80">
+
+<div class="cake-info">
+
+<h3>Strawberry Bliss</h3>
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+Fresh strawberry cream cake topped with seasonal berries.
+
+</p>
+
+<div class="price">
+
+Rs.2,699
+
+</div>
+
+<a href="contact.html" class="btn">
+
+Order
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ CATEGORIES ================-->
+
+<section>
+
+<h2 class="heading">
+
+Shop By Category
+
+</h2>
+
+<div class="cake-grid">
+
+<div class="cake-card">
+
+<img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=700&q=80">
+
+<div class="cake-info">
+
+<h3>Birthday Cakes</h3>
+
+<p>
+
+Creative birthday cakes for kids and adults.
+
+</p>
+
+<a href="birthday.html" class="btn">
+
+View More
+
+</a>
+
+</div>
+
+</div>
+
+<div class="cake-card">
+
+<img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=80">
+
+<div class="cake-info">
+
+<h3>Wedding Cakes</h3>
+
+<p>
+
+Luxury multi-tier cakes for unforgettable weddings.
+
+</p>
+
+<a href="wedding.html" class="btn">
+
+View More
+
+</a>
+
+</div>
+
+</div>
+
+<div class="cake-card">
+
+<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=700&q=80">
+
+<div class="cake-info">
+
+<h3>Cupcakes</h3>
+
+<p>
+
+Fresh cupcakes available in many delicious flavours.
+
+</p>
+
+<a href="cupcakes.html" class="btn">
+
+View More
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== END OF PART 1 ===== -->
+    <!--================ WHY CHOOSE US ================-->
+
+<section>
+
+<h2 class="heading">
+Why Choose Sweet Delights?
+</h2>
+
+<div class="cake-grid">
+
+<div class="cake-card">
+
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80">
+
+<div class="cake-info">
+
+<h3>Fresh Ingredients</h3>
+
+<p>
+We use only premium quality chocolate, fresh cream and natural ingredients to bake every cake with perfection.
+</p>
+
+</div>
+
+</div>
+
+<div class="cake-card">
+
+<img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80">
+
+<div class="cake-info">
+
+<h3>Expert Bakers</h3>
+
+<p>
+Our experienced chefs create unique cake designs for birthdays, weddings and every special occasion.
+</p>
+
+</div>
+
+</div>
+
+<div class="cake-card">
+
+<img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=700&q=80">
+
+<div class="cake-info">
+
+<h3>Fast Delivery</h3>
+
+<p>
+Same-day delivery is available across Islamabad and Rawalpindi for selected cakes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ CUSTOMER REVIEWS ================-->
+
+<section>
+
+<h2 class="heading">
+Happy Customers
+</h2>
+
+<div class="cake-grid">
+
+<div class="cake-card">
+
+<div class="cake-info">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+
+"The chocolate cake was incredibly delicious and beautifully decorated. Everyone loved it."
+
+</p>
+
+<h4>- Sarah Khan</h4>
+
+</div>
+
+</div>
+
+<div class="cake-card">
+
+<div class="cake-info">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+
+"The wedding cake looked exactly like our reference picture. Amazing service!"
+
+</p>
+
+<h4>- Ahmed Ali</h4>
+
+</div>
+
+</div>
+
+<div class="cake-card">
+
+<div class="cake-info">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+
+"Fresh, soft and delivered on time. Highly recommended for birthdays."
+
+</p>
+
+<h4>- Areeba Fatima</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ SPECIAL OFFER ================-->
+
+<section class="hero" style="height:60vh;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=1600&q=80') center/cover;">
+
+<div class="hero-content">
+
+<h3>Limited Time Offer</h3>
+
+<h1>20% OFF</h1>
+
+<p>
+
+Order your favourite cake today and enjoy free delivery on orders above Rs.5000.
+
+</p>
+
+<a href="contact.html" class="btn">
+
+Claim Offer
+
+</a>
+
+</div>
+
+</section>
+
+<!--================ CONTACT PREVIEW ================-->
+
+<section>
+
+<h2 class="heading">
+Visit Our Bakery
+</h2>
+
+<div class="cake-grid">
+
+<div class="cake-card">
+
+<div class="cake-info">
+
+<h3>📍 Address</h3>
+
+<p>
+
+F-10 Markaz, Islamabad, Pakistan
+
+</p>
+
+</div>
+
+</div>
+
+<div class="cake-card">
+
+<div class="cake-info">
+
+<h3>📞 Phone</h3>
+
+<p>
+
++92 300 1234567
+
+</p>
+
+</div>
+
+</div>
+
+<div class="cake-card">
+
+<div class="cake-info">
+
+<h3>📧 Email</h3>
+
+<p>
+
+info@sweetdelights.com
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ FOOTER ================-->
+
+<footer>
+
+<h2 style="font-family:'Great Vibes',cursive;font-size:40px;margin-bottom:10px;">
+
+Sweet Delights
+
+</h2>
+
+<p>
+
+Fresh Cakes • Wedding Cakes • Birthday Cakes • Cupcakes
+
+</p>
+
+<br>
+
+<p>
+
+Follow Us
+
+</p>
+
+<br>
+
+<div style="font-size:28px;">
+
+<a href="#" style="color:white;margin:0 12px;"><i class="fab fa-facebook"></i></a>
+
+<a href="#" style="color:white;margin:0 12px;"><i class="fab fa-instagram"></i></a>
+
+<a href="#" style="color:white;margin:0 12px;"><i class="fab fa-youtube"></i></a>
+
+<a href="#" style="color:white;margin:0 12px;"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+<br>
+
+<p>
+
+© 2026 Sweet Delights Bakery | Made with ❤️ by Areeba Fatima
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
